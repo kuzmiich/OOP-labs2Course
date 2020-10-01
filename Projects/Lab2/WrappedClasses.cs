@@ -5,6 +5,14 @@ using System.Text;
 
 namespace Lab2
 {
+    interface IValueHolder<T>
+    {
+        T Value { get; set; }
+    }
+    public interface IWrappedPrimitiveInfo
+    {
+        string GetMainTypeInfo();
+    }
     public class WrappedInt : IWrappedPrimitiveInfo, IValueHolder<int>
     {
         public int Value { get; set; } = default;
@@ -24,7 +32,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 1 bytes | MinValue = {byte.MinValue}, MaxValue = {byte.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 1 bytes | MinValue = {byte.MinValue}, MaxValue = {byte.MaxValue}";
         }
     }
 
@@ -34,7 +42,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 1 bytes | MinValue = false, MaxValue = true";
+            return $"Type = { Value.GetType() }, Size = 1 bytes | MinValue = false, MaxValue = true";
         }
     }
 
@@ -64,7 +72,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 2 bytes | MinValue = {ushort.MinValue}, MaxValue = {ushort.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 2 bytes | MinValue = {ushort.MinValue}, MaxValue = {ushort.MaxValue}";
         }
     }
     public class WrappedUint : IWrappedPrimitiveInfo, IValueHolder<uint>
@@ -73,7 +81,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 4 bytes | MinValue = {uint.MinValue}, MaxValue = {uint.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 4 bytes | MinValue = {uint.MinValue}, MaxValue = {uint.MaxValue}";
         }
     }
     public class WrappedLong : IWrappedPrimitiveInfo, IValueHolder<long>
@@ -82,7 +90,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 8 bytes | MinValue = {long.MinValue}, MaxValue = {long.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 8 bytes | MinValue = {long.MinValue}, MaxValue = {long.MaxValue}";
         }
     }
 
@@ -92,7 +100,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 8 bytes | MinValue = {ulong.MinValue}, MaxValue = {ulong.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 8 bytes | MinValue = {ulong.MinValue}, MaxValue = {ulong.MaxValue}";
         }
     }
 
@@ -102,7 +110,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 4 bytes | MinValue = {float.MinValue}, MaxValue = {float.MaxValue}\n";
+            return $"Type = { Value.GetType() }, Size = 4 bytes | MinValue = {float.MinValue}, MaxValue = {float.MaxValue}\n";
         }
     }
 
@@ -120,9 +128,9 @@ namespace Lab2
     {
         public decimal Value { get; set; } = default;
 
-        public string GetMainTypeInfo()
+        public  string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 16 bytes | MinValue = {decimal.MinValue}, MaxValue = {decimal.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 16 bytes | MinValue = {decimal.MinValue}, MaxValue = {decimal.MaxValue}";
         }
     }
 
@@ -132,7 +140,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = 2 bytes | MinValue = {(int)char.MinValue}, MaxValue = {(int)char.MaxValue}";
+            return $"Type = { Value.GetType() }, Size = 2 bytes | MinValue = {(int)char.MinValue}, MaxValue = {(int)char.MaxValue}";
         }
     }
 
@@ -142,7 +150,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = N/A";
+            return $"Type = { Value.GetType() }, Size = N/A";
         }
     }
 
@@ -152,7 +160,7 @@ namespace Lab2
 
         public string GetMainTypeInfo()
         {
-            return $"Type = {Value.GetType()}, Size = N/A";
+            return $"Type = { Value.GetType() }, Size = N/A";
         }
     }
 

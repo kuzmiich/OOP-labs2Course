@@ -13,6 +13,7 @@ namespace Lab1
             printConsole("Hello World!");
             printConsole(14);
             printConsole(15.1);
+            printConsole("Csharp better than Java");
         }
     }
 }
