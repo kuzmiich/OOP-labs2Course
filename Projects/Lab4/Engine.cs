@@ -8,19 +8,19 @@ namespace Laba4
         public static string Common1(int year)
         {
             int head = 0;
-            const int startHead = 3, UpTwoHundred = 3, CoefUpTreeHundred = 2;
+            const int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
             const int zeroYear = 0, TwoHundredYear = 200, TreeHundredYear = 300;
             if (year < TwoHundredYear && year > zeroYear)
             {
-                head = year * UpTwoHundred + startHead;
+                head = year * CoefUpTwoHundred + startHead;
             }
             else if (year >= TwoHundredYear && year < TreeHundredYear)
             {
-                head = TwoHundredYear * UpTwoHundred + (year - TwoHundredYear) * CoefUpTreeHundred + startHead;
+                head = TwoHundredYear * CoefUpTwoHundred + (year - TwoHundredYear) * CoefUpTreeHundred + startHead;
             }
             else if (year >= TreeHundredYear)
             {
-                head = TwoHundredYear * UpTwoHundred + (TreeHundredYear - TwoHundredYear) * CoefUpTreeHundred + (year - TreeHundredYear) + startHead;
+                head = TwoHundredYear * CoefUpTwoHundred + (TreeHundredYear - TwoHundredYear) * CoefUpTreeHundred + (year - TreeHundredYear) + startHead;
             }
             else
             {
@@ -69,6 +69,7 @@ namespace Laba4
             }
             return $"Max = {max}, Min = {min}";
         }
+        //
         public static bool Common3(int number)
         {
             List<int> listdividers = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 19 };
@@ -81,9 +82,39 @@ namespace Laba4
             }
             return false;
         }
-        public static string Individual1(int number)
+        // Individual A1
+        private static bool isTriangle(double a, double b, double c)
         {
-            return ""; 
+            if (c > a && a > b && c < a + b && c > a - b)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static string IndividualA1(double a, double b, double c)
+        {
+            return "Is these sides are sides of a triangle - " + isTriangle(a, b, c);
+        }
+        // Individual A2
+        private static bool isVowel1(char letter)
+        {
+            List<char> listVowel = new List<char>{ 'a', 'e', 'i', 'o', 'u' };
+            return listVowel.Contains(letter);
+        }
+        private static bool isVowel2(char letter)
+        {
+            return true;
+        }
+        private static bool isVowel3(char letter)
+        {
+            return true;
+        }
+        public static string IndividualA2(char letter)
+        {
+            return $"{isVowel1(letter)}\n{isVowel2(letter)}\n{isVowel2(letter)}";
         }
     }
 }
