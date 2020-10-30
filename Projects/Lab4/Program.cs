@@ -18,7 +18,7 @@ namespace Laba4
             }
             Console.WriteLine(Engine.Common1(year));
 
-            //
+            // 2
             Console.WriteLine("Fill in the array of numbers:");
             int[] numbers = null;
             try
@@ -31,7 +31,7 @@ namespace Laba4
             }
             Console.WriteLine(Engine.Common2(numbers));
 
-            //
+            // 3
             Console.WriteLine("Input number: ");
             int number = 0;
             try
@@ -43,7 +43,8 @@ namespace Laba4
                 Console.WriteLine(ex.Message);
             }
             Console.WriteLine("The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19 - " + Engine.Common3(number));
-            //
+
+            // 4
 
 
         }

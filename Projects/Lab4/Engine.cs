@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace Laba4
 {
@@ -33,7 +32,22 @@ namespace Laba4
         // The Greatest
         private static bool isAllValuesEquel(int[] numbers)
         {
-            Dictionary<int> dict;
+            bool flag = false;
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                
+                if (numbers[0] == numbers[i])
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                    break;
+                    // return false;
+                }
+            }
+            return flag;
         }
         public static string Common2(int[] numbers)
         {
