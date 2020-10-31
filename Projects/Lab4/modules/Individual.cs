@@ -227,9 +227,29 @@ namespace Lab4.Modules
         }
         public static string IndividualB3()
         {
-            Dictionary<int, string> cardSuits = new Dictionary<int, string>(4);
-            cardSuits.Add(1, "Червы");
-            return "";
+            Dictionary<int, string> cardSuits = new Dictionary<int, string>
+            {
+                { 1, "peaks" },
+                { 2, "club" },
+                { 3, "diamond"},
+                { 4, "hearts"}
+            };
+            Dictionary<int, string> cardAdvantage = new Dictionary<int, string> {
+                { 6, "Six" },
+                { 7, "Seven"},
+                { 8, "Eight"},
+                { 9, "Nine"},
+                { 10, "Ten"},
+                { 11, "Eleven"},
+                { 12, "twelve"},
+                { 13, "thirteen"},
+                { 14, "Chetyrnadcati"},
+            };
+            Random rand = new Random();
+            int countCardAdvantage = cardAdvantage.Count, countCardSuits = cardSuits.Count;
+            int indexAdvantage = rand.Next(countCardAdvantage);
+            int indexSuits = rand.Next(countCardSuits);
+            return cardAdvantage[indexAdvantage + 6] + " " + cardSuits[indexSuits + 1];
         }
     }
 }
