@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lab2.Tasks
+﻿namespace Lab2.Tasks
 {
     public static class Converter
     {

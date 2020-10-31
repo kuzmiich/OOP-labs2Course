@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab2.Tasks
+namespace Lab4.Modules
 {
    public static class IOservice
    {
@@ -12,5 +12,9 @@ namespace Lab2.Tasks
         {
             return Console.ReadLine();
         }
-   }
+        public static char GetUserInputLetter()
+        {
+            return Convert.ToChar(Console.Read());
+        }
+    }
 }

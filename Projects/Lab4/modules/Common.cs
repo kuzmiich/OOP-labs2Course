@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Laba4
+namespace Lab4.Modules
 {
-    class Engine
+    class CommonTasks
     {
         public static string Common1(int year)
         {
@@ -81,40 +80,6 @@ namespace Laba4
                 }
             }
             return false;
-        }
-        // Individual A1
-        private static bool isTriangle(double a, double b, double c)
-        {
-            if (c > a && a > b && c < a + b && c > a - b)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public static string IndividualA1(double a, double b, double c)
-        {
-            return "Is these sides are sides of a triangle - " + isTriangle(a, b, c);
-        }
-        // Individual A2
-        private static bool isVowel1(char letter)
-        {
-            List<char> listVowel = new List<char>{ 'a', 'e', 'i', 'o', 'u' };
-            return listVowel.Contains(letter);
-        }
-        private static bool isVowel2(char letter)
-        {
-            return true;
-        }
-        private static bool isVowel3(char letter)
-        {
-            return true;
-        }
-        public static string IndividualA2(char letter)
-        {
-            return $"{isVowel1(letter)}\n{isVowel2(letter)}\n{isVowel2(letter)}";
         }
     }
 }
