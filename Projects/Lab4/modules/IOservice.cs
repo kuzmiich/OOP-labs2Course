@@ -12,6 +12,19 @@ namespace Lab4.Modules
         {
             return Console.ReadLine();
         }
+        public static int ConvertToInt(string value)
+        {
+            int res = 0;
+            try
+            {
+                res = Convert.ToInt32(value);
+            }
+            catch (FormatException ex)
+            {
+                IOservice.ShowMessage(ex.Message);
+            }
+            return res;
+        }
         public static char GetUserInputLetter()
         {
             return Convert.ToChar(Console.Read());

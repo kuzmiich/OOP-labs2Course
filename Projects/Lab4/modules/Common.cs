@@ -1,11 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Lab4.Modules
 {
     class CommonTasks
     {
-        public static string Common1(int year)
+        // Define count of dragon heads and eyes
+        public static string Common1()
         {
+            IOservice.ShowMessage("Input count of heads: ");
+            int year = 0;
+            year = IOservice.ConvertToInt(IOservice.GetUserInputStr());
+            
             int head = 0;
             const int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
             const int zeroYear = 0, TwoHundredYear = 200, TreeHundredYear = 300;
@@ -48,8 +54,18 @@ namespace Lab4.Modules
             }
             return flag;
         }
-        public static string Common2(int[] numbers)
+        public static string Common2()
         {
+            Console.WriteLine("Fill in the array of numbers:");
+            int[] numbers = null;
+            try
+            {
+                numbers = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             if (isAllValuesEquel(numbers))
             {
                 return "All values are equal.";
@@ -69,8 +85,18 @@ namespace Lab4.Modules
             return $"Max = {max}, Min = {min}";
         }
         //
-        public static bool Common3(int number)
+        public static bool Common3()
         {
+            Console.WriteLine("Input number: ");
+            int number = 0;
+            try
+            {
+                number = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             List<int> listdividers = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 19 };
             foreach (var el in listdividers)
             {
