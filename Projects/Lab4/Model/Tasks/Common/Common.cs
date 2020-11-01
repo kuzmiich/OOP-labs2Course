@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Lab4.Views;
+using Lab4.Model.MyConverter;
+using System;
 using System.Collections.Generic;
 
-namespace Lab4.Modules
+namespace Lab4.Model.Tasks.Common
 {
     class CommonTasks
     {
         // Define count of dragon heads and eyes
         public static string Common1()
         {
-            IOservice.ShowMessage("Input count of heads: ");
-            int year = 0;
-            year = IOservice.ConvertToInt(IOservice.GetUserInputStr());
+            OutputService.ShowMessage("Input count of heads: ");
+            int year = Converter.ConvertToInt(InputService.GetUserInputStr());
             
             int head = 0;
             const int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
@@ -56,15 +57,15 @@ namespace Lab4.Modules
         }
         public static string Common2()
         {
-            Console.WriteLine("Fill in the array of numbers:");
+            OutputService.ShowMessage("Fill in the array of numbers:");
             int[] numbers = null;
             try
             {
-                numbers = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+                numbers = Array.ConvertAll(InputService.GetUserInputStr().Split(), int.Parse);
             }
             catch (FormatException ex)
             {
-                Console.WriteLine(ex.Message);
+                OutputService.ShowMessage(ex.Message);
             }
             if (isAllValuesEquel(numbers))
             {
@@ -84,20 +85,9 @@ namespace Lab4.Modules
             }
             return $"Max = {max}, Min = {min}";
         }
-        //
-        public static bool Common3()
+
+        private static bool IsDivider(List<int> listdividers, int number)
         {
-            Console.WriteLine("Input number: ");
-            int number = 0;
-            try
-            {
-                number = Convert.ToInt32(Console.ReadLine());
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            List<int> listdividers = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 19 };
             foreach (var el in listdividers)
             {
                 if (number % el == 0)
@@ -106,6 +96,15 @@ namespace Lab4.Modules
                 }
             }
             return false;
+        }
+        // The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19:
+        public static string Common3()
+        {
+            OutputService.ShowMessage("Input number: ");
+            int number = Converter.ConvertToInt(InputService.GetUserInputStr());
+            List<int> listdividers = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 19 };
+
+            return "The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19 - " + IsDivider(listdividers, number);
         }
     }
 }
