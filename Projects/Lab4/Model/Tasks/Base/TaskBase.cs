@@ -1,4 +1,7 @@
 ﻿using Lab4.Views;
+using Lab4.Model.Tasks.Common;
+using Lab4.Model.Tasks.Individual;
+using Lab4.Model.Tasks.Additional;
 
 namespace Lab4.Model.Tasks.Base
 {

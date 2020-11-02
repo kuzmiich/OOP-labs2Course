@@ -11,8 +11,10 @@ namespace Lab4
         private static void MenuCommand()
         {
             OutputService.ShowMessage("1.Show all tasks\n");
-            OutputService.ShowMessage("2.\n");
-            OutputService.ShowMessage("3.\n");
+            OutputService.ShowMessage("2.Choose task type.\n");
+            OutputService.ShowMessage("3.Choose some task.\n");
+            OutputService.ShowMessage("4.\n");
+            OutputService.ShowMessage("3.Choose some task.\n");
         }
         public static void Main(string[] args)
         {
@@ -24,7 +26,7 @@ namespace Lab4
                 switch (command)
                 {
                     case "1":
-                        TaskOutput = CommonTasks.Common1();
+                        TaskOutput = CommonTasks.Common();
                         break;
                     case "2":
                         TaskOutput = CommonTasks.Common2();
@@ -33,7 +35,7 @@ namespace Lab4
                         TaskOutput = CommonTasks.Common3();
                         break;
                     case "4":
-                        TaskOutput = IndividualTasksA.IndividualA1();
+                        TaskOutput = IndividualTasksA.IndividualA();
                         break;
                     case "5":
                         TaskOutput = IndividualTasksA.IndividualA2();
@@ -48,7 +50,7 @@ namespace Lab4
                         TaskOutput = IndividualTasksA.IndividualA5();
                         break;
                     case "9":
-                        TaskOutput = IndividualTasksB.IndividualB1();
+                        TaskOutput = IndividualTasksB.IndividualB();
                         break;
                     case "10":
                         TaskOutput = IndividualTasksB.IndividualB2();
@@ -75,7 +77,7 @@ namespace Lab4
                         TaskOutput = IndividualTasksB.IndividualB9();
                         break;
                     case "18":
-                        TaskOutput = AdditionalTasks.Additional1();
+                        TaskOutput = AdditionalTasks.Additional();
                         break;
                     case "exit":
                         return;

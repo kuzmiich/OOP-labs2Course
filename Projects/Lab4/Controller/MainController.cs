@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Lab4.Controller
 {
-    class MainController
+    sealed class MainController
     {
-        public IEnumerable<ITask> Tasks { get; set; }
+        public IEnumerable<ITask> Tasks { get; }
         public IInputService InputService { get; }
         public IOutputService OutputService { get; }
 

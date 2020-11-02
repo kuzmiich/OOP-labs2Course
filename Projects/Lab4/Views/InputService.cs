@@ -4,7 +4,7 @@ namespace Lab4.Views
 {
     class InputService : IInputService
     {
-        public static string GetUserInputStr()
+        public static string InputString()
         {
             return Console.ReadLine();
         }

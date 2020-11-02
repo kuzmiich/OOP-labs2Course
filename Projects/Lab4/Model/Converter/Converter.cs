@@ -5,6 +5,32 @@ namespace Lab4.Model.MyConverter
 {
     public class Converter : IConverter
     {
+        public static int[] ConvertToArrayInt(string value)
+        {
+            int[] res;
+            try
+            {
+                res = Array.ConvertAll(value.Split(), int.Parse);
+            }
+            catch (FormatException ex)
+            {
+                throw new FormatException(ex.Message);
+            }
+            return res;
+        }
+        public static int ConvertToChar(char letter)
+        {
+            char res = ' ';
+            try
+            {
+                res = Convert.ToChar(letter);
+            }
+            catch (FormatException ex)
+            {
+                throw new FormatException(ex.Message);
+            }
+            return res;
+        }
         public static int ConvertToInt(string value)
         {
             int res = 0;
@@ -14,7 +40,7 @@ namespace Lab4.Model.MyConverter
             }
             catch (FormatException ex)
             {
-                OutputService.ShowMessage(ex.Message);
+                throw new FormatException(ex.Message);
             }
             return res;
         }
@@ -27,7 +53,7 @@ namespace Lab4.Model.MyConverter
             }
             catch (FormatException ex)
             {
-                OutputService.ShowMessage(ex.Message);
+                throw new FormatException(ex.Message);
             }
             return res;
         }
@@ -40,7 +66,7 @@ namespace Lab4.Model.MyConverter
             }
             catch (FormatException ex)
             {
-                OutputService.ShowMessage(ex.Message);
+                throw new FormatException(ex.Message);
             }
             return res;
         }

@@ -5,7 +5,7 @@ using Lab4.Model.MyConverter;
 
 namespace Lab4.Model.Tasks.Individual
 {
-    class IndividualTasksA
+    static class IndividualTasksA
     {
         // Individual A1
         private static bool IsTriangle(double a, double b, double c)
@@ -19,29 +19,29 @@ namespace Lab4.Model.Tasks.Individual
                 return false;
             }
         }
-        public static string IndividualA1()
+        public static string IndividualA(double a, double b, double c)
         {
-            Console.WriteLine("Input 3 sides: ");
-            double a = Converter.ConvertToInt(InputService.GetUserInputStr());
-            double b = Converter.ConvertToInt(InputService.GetUserInputStr());
-            double c = Converter.ConvertToInt(InputService.GetUserInputStr());
+            
             return "Is these sides are sides of a triangle - " + IsTriangle(a, b, c);
         }
         // Individual A2
         private static string IsVowel1(char letter)
         {
             List<char> listVowel = new List<char> { 'a', 'e', 'i', 'o', 'u' };
+            string letterType = "";
             if (listVowel.Contains(letter))
             {
-                return "Vowel";
+                letterType = "Vowel";
             }
             else
             {
-                return "Сonsonant";
+                letterType = "Сonsonant";
             }
+            return letterType;
         }
         private static string IsVowel2(char letter)
         {
+            string letterType = "";
             switch (letter)
             {
                 case 'a':
@@ -49,14 +49,18 @@ namespace Lab4.Model.Tasks.Individual
                 case 'i':
                 case 'o':
                 case 'u':
-                    return "Vovel";
+                    letterType = "Vovel";
+                    break;
                 default:
-                    return "Consonant";
+                    letterType = "Consonant";
+                    break;
             }
+            return letterType;
         }
         private static string IsVowel3(char letter)
         {
             bool flag = false;
+            string letterType = "";
             if (letter == 'a')
             {
                 flag = true;
@@ -80,25 +84,16 @@ namespace Lab4.Model.Tasks.Individual
 
             if (flag)
             {
-                return "Vowel";
+                letterType = "Vowel";
             }
             else
             {
-                return "Сonsonant";
+                letterType = "Сonsonant";
             }
+            return letterType;
         }
-        public static string IndividualA2()
+        public static string IndividualA2(char letter)
         {
-            Console.WriteLine("Input letter: ");
-            char letter = ' ';
-            try
-            {
-                letter = Convert.ToChar(InputService.GetUserInputLetter());
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
             return $"{IsVowel1(letter)}\n{IsVowel2(letter)}\n{IsVowel3(letter)}";
         }
         // Individual A3 - Mood sensor
@@ -114,11 +109,8 @@ namespace Lab4.Model.Tasks.Individual
         {
             return "(o˘◡˘o)";
         }
-        public static string IndividualA3()
+        public static string IndividualA3(int mood)
         {
-            OutputService.ShowMessage("The mood of the user:\n");
-            Random rand = new Random();
-            int mood = rand.Next(100);
             string smile = "";
             if (mood > 0 && mood < 33)
             {
@@ -134,25 +126,19 @@ namespace Lab4.Model.Tasks.Individual
             }
             else
             {
-                smile = "Error, program was broken.";
+                throw new Exception("Error, program was broken.");
             }
             return smile;
         }
         // Individual A4 - Dice
-        public static string IndividualA4()
+        public static string IndividualA4(int[] dies)
         {
-            OutputService.ShowMessage("Roll the dice:\n");
-            Random rand = new Random();
-            int countPoint = 6;
-            int firstDie = rand.Next(countPoint);
-            int secondDie = rand.Next(countPoint);
-            return $"On the first die, it fell out - {firstDie}\nOn the second die, it fell out - {secondDie}\nResult = {firstDie + secondDie}";
+            return $"On the first die, it fell out - {dies[0]}\nOn the second die, it fell out - {dies[1]}\nResult = {dies[0] + dies[1]}";
         }
         // Individual A5 - Simulator of pies with a surprise
-        public static string IndividualA5()
+        public static string IndividualA5(int index)
         {
             OutputService.ShowMessage("Open the pie with a surprise:\n");
-           
             List<string> listSurprise = new List<string>() 
             {    "Помни, что каждый день — первый в оставшейся части жизни.",
                  "В жизни есть главное и не главное, а мы часто тратим силы на пустяки.",
@@ -164,20 +150,15 @@ namespace Lab4.Model.Tasks.Individual
                  "Каждому причитается столько счастья, сколько сам в силах подарить.",
                  "Если хотите иметь успех, вы должны выглядеть так, как будто вы его имеете."
              };
-            Random rand = new Random();
-            int index = rand.Next(listSurprise.Count - 1);
             return listSurprise[index];
         }
     }
     class IndividualTasksB
     {
-        public static string IndividualB1()
+        public static string IndividualB(int dayOfWeek)
         {
-            OutputService.ShowMessage("Input number from 1 to 7:");
             List<string> listDayOfWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            int dayOfWeek = 0, startRange = 1, endRange = 7;
-
-            dayOfWeek = Converter.ConvertToInt(InputService.GetUserInputStr());
+            int startRange = 1, endRange = 7;
 
 
             if (dayOfWeek >= startRange && dayOfWeek <= endRange)
@@ -190,13 +171,10 @@ namespace Lab4.Model.Tasks.Individual
                 return "";
             }
         }
-        public static string IndividualB2()
+        public static string IndividualB2(int mark)
         {
-            OutputService.ShowMessage("Input number from 0 to 10:");
             int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int mark = 0;
             string res = "";
-            mark = Converter.ConvertToInt(InputService.GetUserInputStr());
             if (mark >= numbers[0] && mark <= numbers[1])
             {
                 res = "Very bad";
@@ -219,13 +197,13 @@ namespace Lab4.Model.Tasks.Individual
             }
             else
             {
-                OutputService.ShowMessage("Error, invalid data.");
-                return "";
+                throw new Exception("Error, invalid data.");
             }
             return $"Mark is {res}";
         }
-        public static string IndividualB3()
+        public static string IndividualB3(int[] arrNumbers)
         {
+            int indexAdvantage = arrNumbers[0], indexSuits = arrNumbers[1];
             Dictionary<int, string> cardSuits = new Dictionary<int, string>
             {
                 { 1, "peaks" },
@@ -244,15 +222,14 @@ namespace Lab4.Model.Tasks.Individual
                 { 13, "thirteen"},
                 { 14, "Chetyrnadcati"},
             };
-            Random rand = new Random();
-            int countCardAdvantage = cardAdvantage.Count, countCardSuits = cardSuits.Count;
-            int indexAdvantage = rand.Next(countCardAdvantage);
-            int indexSuits = rand.Next(countCardSuits);
-            return cardAdvantage[indexAdvantage + 6] + " " + cardSuits[indexSuits + 1];
+            int countCardAdvantage = cardAdvantage.Count, startKeyAdvantage = 6,
+                countCardSuits = cardSuits.Count, startKeySuits = 1;
+            
+            return cardAdvantage[indexAdvantage + startKeyAdvantage] + " " + cardSuits[indexSuits + startKeySuits];
         }
-        public static string IndividualB4()
+        public static string IndividualB4(int year)
         {
-            Dictionary<int, string> dictYears = new Dictionary<int, string>
+            /*Dictionary<int, string> dictYears = new Dictionary<int, string>
             {
                 { 0, "zero" }, { 1, "one" }, { 2, "two" }, { 3, "three"}, { 4, "four"}, { 5, "five" }, { 6, "six" }, { 7, "seven"}, { 8, "eight"}, { 9, "nine"},
                 { 10, "ten"}, { 11, "eleven" }, { 12, "twelve" }, { 13, "thirteen"}, { 14, "fourteen"}, { 15, "fifteen" }, { 16, "sixteen" }, { 17, "seventeen"}, { 18, "eighteen"}, { 19, "nineteen"},
@@ -267,13 +244,11 @@ namespace Lab4.Model.Tasks.Individual
                 { 100, "one hundred"}, { 101, "one hundred one" }, { 102, "one hundred two" }, { 103, "one hundred three"}, { 104, "one hundred four"}, { 105, "one hundred five" }, { 106, "one hundred six" }, { 107, "one hundred seven"}, { 108, "one hundred eight"}, { 109, "one hundred nine"},
                 { 110, "one hundred ten"}, { 111, "one hundred eleven" }, { 112, "one hundred twelve" }, { 113, "one hundred thirteen"}, { 114, "one hundred fourteen"}, { 115, "one hundred fifteen" }, { 116, "one hundreed sixty" }, { 117, "one hundred seventy"}, { 118, "one hundred eighty"}, { 119, "one hundred nineteen"},
                 { 120, "one hundred twenty"},
-            };
-            Random rand = new Random();
-            int year = rand.Next(dictYears.Count - 1);
+            };*/
             int lower = 1, upper = 4, coefFactor = 10;
             int exceptionalYear = 1;
             string resYear = "";
-            if (year == exceptionalYear)
+            /*if (year == exceptionalYear)
             {
                 resYear = dictYears[year] + " year";
             }
@@ -284,7 +259,7 @@ namespace Lab4.Model.Tasks.Individual
             else
             {
                 resYear = dictYears[year] + " years";
-            }
+            }*/
             return resYear;
         }
         // count of day in mount for not a leap year
@@ -296,8 +271,8 @@ namespace Lab4.Model.Tasks.Individual
                 { 7, "July" }, { 8, "August"}, { 9, "September"}, { 10, "October"}, { 11, "November"}, { 12, "December"}
             };
             string numberDays = "";
-            uint numberMounth = Converter.ConvertToUInt(InputService.GetUserInputStr());
-            uint numberYear = Converter.ConvertToUInt(InputService.GetUserInputStr());
+            uint numberMounth = Converter.ConvertToUInt(InputService.InputString());
+            uint numberYear = Converter.ConvertToUInt(InputService.InputString());
 
             return numberDays;
         }
@@ -309,7 +284,7 @@ namespace Lab4.Model.Tasks.Individual
                 { 7, "July" }, { 8, "August"}, { 9, "September"}, { 10, "October"}, { 11, "November"}, { 12, "December"}
             };
             string resTimeYear = "";
-            int numberMounth = Converter.ConvertToInt(InputService.GetUserInputStr());
+            int numberMounth = Converter.ConvertToInt(InputService.InputString());
             if (numberMounth > 1 && numberMounth < 3 || numberMounth == 12)
             {
                 resTimeYear = "Winter";
@@ -338,8 +313,8 @@ namespace Lab4.Model.Tasks.Individual
         {
             List<string> listOperations = new List<string> { "+", "-", "*", "/", "%" };
             var operation = InputService.GetUserInputLetter();
-            var number1 = Converter.ConvertToInt(InputService.GetUserInputStr());
-            var number2 = Converter.ConvertToInt(InputService.GetUserInputStr());
+            var number1 = Converter.ConvertToInt(InputService.InputString());
+            var number2 = Converter.ConvertToInt(InputService.InputString());
             double resNumber = 0;
             switch(operation)
             {
@@ -378,12 +353,8 @@ namespace Lab4.Model.Tasks.Individual
             }
             return resNumber.ToString();
         }
-        public static string IndividualB8()
+        public static string IndividualB8(int day, int mounth)
         {
-            OutputService.ShowMessage("\nВведите дату(d):");
-            int day = Converter.ConvertToInt(InputService.GetUserInputStr());
-            OutputService.ShowMessage("\nВведите месяц(m):");
-            int mounth = Converter.ConvertToInt(InputService.GetUserInputStr());
 
             int twentyTree = 23, twentyTwo = 22, twentyOne = 21, twenty = 20, nineteen = 19;
             string zodiacSign = "";
@@ -431,7 +402,7 @@ namespace Lab4.Model.Tasks.Individual
             }
             return zodiacSign;
         }
-        public static string IndividualB9()
+        public static string IndividualB9(int number)
         {
             Dictionary<int, string> dictOneHundredNumbers = new Dictionary<int, string>
             {
@@ -450,7 +421,6 @@ namespace Lab4.Model.Tasks.Individual
                 { 120, "one hundred twenty"},
             };
             OutputService.ShowMessage("*** The name of the number as a string ***");
-            int number = Converter.ConvertToInt(InputService.GetUserInputStr());
 
             return "";
         }

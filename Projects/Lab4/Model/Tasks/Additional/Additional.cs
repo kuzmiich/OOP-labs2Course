@@ -5,15 +5,59 @@ using Lab4.Views;
 
 namespace Lab4.Model.Tasks.Additional
 {
-    class AdditionalTasks
+    static class AdditionalTasks
     {
-        public static string Additional1()
+        private static bool IsLeep(int year)
         {
-            int day = Converter.ConvertToInt(InputService.GetUserInputStr());
-            int mount = Converter.ConvertToInt(InputService.GetUserInputStr());
-            int year = Converter.ConvertToInt(InputService.GetUserInputStr());
+            bool isLeep = false;
+            // leep
+            if (year % 4 == 0)
+            {
+                isLeep = true;
+            }
+            // not leep
+            else if (year % 4 == 0 && year % 100 == 0)
+            {
+                isLeep = false;
+            }
+            // leep
+            else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
+            {
+                isLeep = true;
+            }
+            return isLeep;
+        }
+        public static string Additional(int day, int mounth, int year)
+        {
+            int[] arrCountDayInMounth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            int countMounth = 12, rotateToStart = 1;
 
-            return "";
+
+            if (IsLeep(year))
+            {
+                arrCountDayInMounth[1]++;
+            }
+
+            int i;
+            for (i = 0; i < countMounth; i++)
+            {
+                if (++i == mounth & day == arrCountDayInMounth[i])
+                {
+                    day = rotateToStart;
+                    mounth++;
+                    break;
+                }
+            }
+            if (i == 12)
+            {
+                day++;
+            }
+            if (mounth == 13)
+            {
+                mounth = rotateToStart;
+                year++;
+            }
+            return (day + mounth + year).ToString();
         }
     }
 }

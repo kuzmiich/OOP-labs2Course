@@ -5,13 +5,11 @@ using System.Collections.Generic;
 
 namespace Lab4.Model.Tasks.Common
 {
-    class CommonTasks
+    static class CommonTasks
     {
         // Define count of dragon heads and eyes
-        public static string Common1()
+        public static string Common(int year)
         {
-            OutputService.ShowMessage("Input count of heads: ");
-            int year = Converter.ConvertToInt(InputService.GetUserInputStr());
             
             int head = 0;
             const int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
@@ -55,18 +53,8 @@ namespace Lab4.Model.Tasks.Common
             }
             return flag;
         }
-        public static string Common2()
+        public static string Common2(int[] numbers)
         {
-            OutputService.ShowMessage("Fill in the array of numbers:");
-            int[] numbers = null;
-            try
-            {
-                numbers = Array.ConvertAll(InputService.GetUserInputStr().Split(), int.Parse);
-            }
-            catch (FormatException ex)
-            {
-                OutputService.ShowMessage(ex.Message);
-            }
             if (isAllValuesEquel(numbers))
             {
                 return "All values are equal.";
@@ -98,12 +86,9 @@ namespace Lab4.Model.Tasks.Common
             return false;
         }
         // The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19:
-        public static string Common3()
+        public static string Common3(int number)
         {
-            OutputService.ShowMessage("Input number: ");
-            int number = Converter.ConvertToInt(InputService.GetUserInputStr());
             List<int> listdividers = new List<int>() { 2, 3, 5, 7, 11, 13, 17, 19 };
-
             return "The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19 - " + IsDivider(listdividers, number);
         }
     }
