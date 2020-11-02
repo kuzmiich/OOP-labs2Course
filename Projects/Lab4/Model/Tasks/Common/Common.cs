@@ -28,7 +28,7 @@ namespace Lab4.Model.Tasks.Common
             }
             else
             {
-                return "Error, incorrect data!";
+                throw new Exception("Error, incorrect data, input number more than 0.");
             }
             int eyes = head * 2;
             return $"Count heads = {head}, count eyes = {eyes}";
@@ -55,9 +55,10 @@ namespace Lab4.Model.Tasks.Common
         }
         public static string Common2(int[] numbers)
         {
+            string resValue = "";
             if (isAllValuesEquel(numbers))
             {
-                return "All values are equal.";
+                resValue = "All values are equal.";
             }
             int max = numbers[0], min = numbers[0];
             for (int i = 0; i < numbers.Length; i++)
@@ -71,7 +72,8 @@ namespace Lab4.Model.Tasks.Common
                     min = numbers[i];
                 }
             }
-            return $"Max = {max}, Min = {min}";
+            resValue = $"Max = {max}, Min = {min}";
+            return resValue;
         }
 
         private static bool IsDivider(List<int> listdividers, int number)
