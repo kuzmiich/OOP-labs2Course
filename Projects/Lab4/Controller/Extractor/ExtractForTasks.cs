@@ -6,6 +6,10 @@ namespace Lab4.Controller.Extractor
 {
     class ExtractForTasks : IExtractForTasks
     {
+        Random rand = new Random();
+        public ExtractForTasks()
+        {
+        }
         public int Common()
         {
             OutputService.ShowMessage("Input count of heads: ");
@@ -40,7 +44,6 @@ namespace Lab4.Controller.Extractor
         public int IndividualA3()
         {
             OutputService.ShowMessage("The mood of the user:\n");
-            Random rand = new Random();
             return rand.Next(100);
         }
         public int[] IndividualA4()
@@ -55,7 +58,6 @@ namespace Lab4.Controller.Extractor
         }
         public int IndividualA5()
         {
-            Random rand = new Random();
             int countSurprise = 8;
             return rand.Next(countSurprise);
         }
@@ -71,28 +73,37 @@ namespace Lab4.Controller.Extractor
         }
         public int IndividualB3()
         {
-            Random rand = new Random();
             int indexAdvantage = rand.Next(4);
             int indexSuits = rand.Next(8);
             return 1;
         }
         public int IndividualB4()
         {
-            Random rand = new Random();
             int countNumbers = 120;
             return rand.Next(countNumbers);
         }
-        public int IndividualB5()
+        public uint[] IndividualB5()
         {
-            return 1;
+            OutputService.ShowMessage("Input number Mounth:");
+            uint numberMounth = Converter.ConvertToUInt(InputService.InputString());
+            OutputService.ShowMessage("Input number Year:");
+            uint numberYear = Converter.ConvertToUInt(InputService.InputString());
+            uint[] arrDate = { numberMounth, numberYear };
+            return arrDate;
         }
         public int IndividualB6()
         {
-            return 1;
+            OutputService.ShowMessage("Input operation and two numbers:");
+            return Converter.ConvertToInt(InputService.InputString());
         }
-        public int IndividualB7()
+        public int[] IndividualB7()
         {
-            return 1;
+            OutputService.ShowMessage("Input operation and two numbers:");
+            char operation = InputService.GetUserInputLetter();
+            int number1 = Converter.ConvertToInt(InputService.InputString());
+            int number2 = Converter.ConvertToInt(InputService.InputString());
+            int[] arrDate = { operation, number1, number2 };
+            return arrDate;
         }
         public int[] IndividualB8()
         {
@@ -100,12 +111,12 @@ namespace Lab4.Controller.Extractor
             int day = Converter.ConvertToInt(InputService.InputString());
             OutputService.ShowMessage("Input mounth:");
             int mounth = Converter.ConvertToInt(InputService.InputString());
-            int[] arrDate = { day, mounth };
-            return arrDate;
+            int[] arrData = { day, mounth };
+            return arrData;
         }
         public int IndividualB9()
         {
-            OutputService.ShowMessage("");
+            OutputService.ShowMessage("Input number:");
             return Converter.ConvertToInt(InputService.InputString());
         }
         public int[] Additional()

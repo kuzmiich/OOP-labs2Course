@@ -263,7 +263,7 @@ namespace Lab4.Model.Tasks.Individual
             return resYear;
         }
         // count of day in mount for not a leap year
-        public static string IndividualB5()
+        public static string IndividualB5(int[] arrData)
         {
             Dictionary<int, string> mounthDict = new Dictionary<int, string>
             {
@@ -271,12 +271,10 @@ namespace Lab4.Model.Tasks.Individual
                 { 7, "July" }, { 8, "August"}, { 9, "September"}, { 10, "October"}, { 11, "November"}, { 12, "December"}
             };
             string numberDays = "";
-            uint numberMounth = Converter.ConvertToUInt(InputService.InputString());
-            uint numberYear = Converter.ConvertToUInt(InputService.InputString());
 
             return numberDays;
         }
-        public static string IndividualB6()
+        public static string IndividualB6(int numberMounth)
         {
             Dictionary<int, string> mounthDict = new Dictionary<int, string>
             {
@@ -284,7 +282,6 @@ namespace Lab4.Model.Tasks.Individual
                 { 7, "July" }, { 8, "August"}, { 9, "September"}, { 10, "October"}, { 11, "November"}, { 12, "December"}
             };
             string resTimeYear = "";
-            int numberMounth = Converter.ConvertToInt(InputService.InputString());
             if (numberMounth > 1 && numberMounth < 3 || numberMounth == 12)
             {
                 resTimeYear = "Winter";
@@ -309,12 +306,9 @@ namespace Lab4.Model.Tasks.Individual
             return resTimeYear;
         }
 
-        public static string IndividualB7()
+        public static string IndividualB7(char operation, int number1, int number2)
         {
             List<string> listOperations = new List<string> { "+", "-", "*", "/", "%" };
-            var operation = InputService.GetUserInputLetter();
-            var number1 = Converter.ConvertToInt(InputService.InputString());
-            var number2 = Converter.ConvertToInt(InputService.InputString());
             double resNumber = 0;
             switch(operation)
             {
