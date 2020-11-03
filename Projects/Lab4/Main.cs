@@ -29,8 +29,10 @@ namespace Lab4
                     case "1":
                         while (true)
                         {
+                            int day = Converter.ConvertToInt(InputService.InputString());
                             int mounth = Converter.ConvertToInt(InputService.InputString());
-                            TaskOutput = IndividualTasksB.IndividualB4(mounth);
+                            int year = Converter.ConvertToInt(InputService.InputString());
+                            TaskOutput = AdditionalTasks.Additional(day, mounth, year);
                             OutputService.ShowMessage(TaskOutput);
                         }
                         break;
