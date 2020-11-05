@@ -1,6 +1,6 @@
 ﻿using System;
 using Lab4.Views;
-using Lab4.Model.MyConverter;
+using Lab4.Utils.MyConverter;
 
 namespace Lab4.Utils
 {

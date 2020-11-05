@@ -1,8 +1,5 @@
 ﻿using Lab4.Utils;
 using Lab4.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {

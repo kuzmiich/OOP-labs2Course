@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab4.Model.MyConverter
+namespace Lab4.Utils.MyConverter
 {
     interface IConverter
     {

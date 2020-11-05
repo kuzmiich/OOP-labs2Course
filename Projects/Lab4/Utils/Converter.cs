@@ -1,7 +1,7 @@
 ﻿using System;
 using Lab4.Views;
 
-namespace Lab4.Model.MyConverter
+namespace Lab4.Utils.MyConverter
 {
     public class Converter : IConverter
     {
