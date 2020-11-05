@@ -1,5 +1,6 @@
 ﻿using Lab4.Model.Tasks.Base;
 using Lab4.Views;
+using Lab4.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,10 +18,6 @@ namespace Lab4.Controller
             Tasks = tasks;
             InputService = inputService;
             OutputService = outputService;
-        }
-        public void Run()
-        {
-            
         }
     }
 }

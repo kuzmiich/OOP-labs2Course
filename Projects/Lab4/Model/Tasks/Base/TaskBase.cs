@@ -1,7 +1,6 @@
-﻿using Lab4.Views;
-using Lab4.Model.Tasks.Common;
-using Lab4.Model.Tasks.Individual;
-using Lab4.Model.Tasks.Additional;
+﻿using Lab4.Utils;
+using Lab4.Views;
+using System;
 
 namespace Lab4.Model.Tasks.Base
 {
@@ -14,7 +13,6 @@ namespace Lab4.Model.Tasks.Base
             InputService = inputService;
             OutputService = outputService;
         }
-
-        public abstract string Invoke();
+        public abstract string Run();
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lab4.Views
+﻿namespace Lab4.Views
 {
-    interface IOutputService
+    public interface IOutputService
     {
+        void ShowMessage(string msg);
     }
 }

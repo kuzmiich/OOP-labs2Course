@@ -31,6 +31,19 @@ namespace Lab4.Model.MyConverter
             }
             return res;
         }
+        public static char ConvertToChar(int letter)
+        {
+            char res;
+            try
+            {
+                res = Convert.ToChar(letter);
+            }
+            catch (FormatException ex)
+            {
+                throw new FormatException(ex.Message);
+            }
+            return res;
+        }
         public static int ConvertToInt(string value)
         {
             int res = 0;
