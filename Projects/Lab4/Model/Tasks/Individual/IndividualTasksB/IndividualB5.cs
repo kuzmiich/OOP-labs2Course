@@ -9,11 +9,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1;
+
             uint[] arrValue = extract.IndividualB5();
-            uint year = arrValue[Zero],
-                mounth = arrValue[One];
+            uint year = arrValue[0],
+                mounth = arrValue[1];
             return IndividualTaskB5(year, mounth);
         }
         public string GetInfo()
@@ -23,27 +22,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         // count of day in mount for not a leap year
         private static bool IsLeep(uint year)
         {
-            const int Zero = 0,
-                Four = 4,
-                Hundred = 100,
-                FourHundred = 400;
-            bool isLeep = false;
-            // leep
-            if (year % Four == Zero)
-            {
-                isLeep = true;
-            }
-            // not leep
-            else if (year % Four == Zero && year % Hundred == Zero)
-            {
-                isLeep = false;
-            }
-            // leep
-            else if (year % Four == Zero && year % Hundred == Zero && year % FourHundred == Zero)
-            {
-                isLeep = true;
-            }
-            return isLeep;
+            return year % 4 == 0 || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0);
         }
         public static string IndividualTaskB5(uint mounth, uint year)
         {

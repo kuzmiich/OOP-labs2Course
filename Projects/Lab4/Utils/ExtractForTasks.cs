@@ -42,10 +42,10 @@ namespace Lab4.Utils
             return arrSides;
         }
         // Error
-        public char IndividualA2()
+        public string IndividualA2()
         {
             _outputService.ShowMessage("Input letter: ");
-            return _inputService.GetLetter();
+            return _inputService.GetString();
         }
         public int IndividualA3()
         {
@@ -106,13 +106,13 @@ namespace Lab4.Utils
             _outputService.ShowMessage("Input number mounth:");
             return Converter.ConvertToInt(_inputService.GetString());
         }
-        public int[] IndividualB7()// Error
+        public int[] IndividualB7()
         {
             _outputService.ShowMessage("Input operation and two numbers:");
-            char operation = _inputService.GetLetter();
+            string operation = _inputService.GetString();
             int number1 = Converter.ConvertToInt(_inputService.GetString());
             int number2 = Converter.ConvertToInt(_inputService.GetString());
-            int[] arrDate = { operation, number1, number2 };
+            int[] arrDate = { operation[0], number1, number2 };
             return arrDate;
         }
         public int[] IndividualB8()

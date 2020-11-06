@@ -16,6 +16,8 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         {
             return "Emulates the user's mood.Two six-sided dice (dice) are thrown and the total amount of points that fell on the first and second dice is calculated:";
         }
+
+        //TODO Replace with constants
         private static string BadMood()
         {
             return "͡Ò﹏Ó";

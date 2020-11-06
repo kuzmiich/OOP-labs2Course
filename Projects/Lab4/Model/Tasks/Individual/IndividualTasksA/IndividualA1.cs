@@ -22,16 +22,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
             return "Determines whether the given sides are sides of a triangle.";
         }
         // Individual A1
+        //TODO FIX LOGIC
         private static bool IsTriangle(double a, double b, double c)
         {
-            if (c > a && a > b && c < a + b && c > a - b)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return c > a && a > b && c < a + b && c > a - b;
         }
         public static string IndividualTaskA1(double aSide, double bSide, double cSide)
         {

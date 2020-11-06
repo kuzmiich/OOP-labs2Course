@@ -16,14 +16,14 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         {
             return "A program that displays the name of the corresponding day of the week according to the number:";
         }
+        //TODO Replace with Enum
         public static string IndividualTaskB1(int dayOfWeek)
         {
             List<string> listDayOfWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            const int StartRange = 1, EndRange = 7, One = 1;
-
+            int StartRange = 1, EndRange = 7;
             if (dayOfWeek >= StartRange && dayOfWeek <= EndRange)
             {
-                return $"Today is - {listDayOfWeek[dayOfWeek - One]}";
+                return $"Today is - {listDayOfWeek[dayOfWeek - 1]}";
             }
             else
             {

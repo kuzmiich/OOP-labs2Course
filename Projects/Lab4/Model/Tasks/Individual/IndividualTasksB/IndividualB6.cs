@@ -17,13 +17,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         {
             return "Displays the name of the corresponding time of year according to the day of the month:";
         }
+        //TODO switch case
         public static string IndividualTaskB6(int numberMounth)
         {
-            Dictionary<int, string> mounthDict = new Dictionary<int, string>
-            {
-                { 1, "January" }, { 2, "February" }, { 3, "March" }, { 4, "April"}, { 5, "May"}, { 6, "June" },
-                { 7, "July" }, { 8, "August"}, { 9, "September"}, { 10, "October"}, { 11, "November"}, { 12, "December"}
-            };
             const int One = 1,
                 Three = 3,
                 Six = 6,

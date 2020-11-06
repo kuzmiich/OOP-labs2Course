@@ -31,8 +31,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
                  "Everyone is entitled to as much happiness as he can give.",
                  "If you want to be successful, you have to look like you have it."
              };
-            const int Zero = 0;
-            if (index < Zero && index > listSurprise.Length)
+            if (index < 0 && index > listSurprise.Length)
             {
                 throw new Exception("Error, incorrect data.Transfer number more than 0");
             }

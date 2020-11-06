@@ -16,6 +16,8 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         {
             return "An application that outputs a string describing the score corresponding to the number M:";
         }
+
+        //TODO Rebuild
         public static string IndividualTaskB2(int mark)
         {
             int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };

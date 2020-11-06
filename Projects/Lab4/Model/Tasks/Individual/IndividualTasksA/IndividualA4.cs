@@ -10,11 +10,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1;
             int[] arrValue = extract.IndividualA4();
-            int firstNumber = arrValue[Zero];
-            int secondNumber = arrValue[One];
+            int firstNumber = arrValue[0];
+            int secondNumber = arrValue[1];
             return IndividualTaskA4(firstNumber, secondNumber);
         }
         public string GetInfo()
@@ -24,8 +22,8 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         // Individual A4 - Dice
         public static string IndividualTaskA4(int firstNumber, int secondNumber)
         {
-            const double Zero = 0;
-            if (firstNumber < Zero && secondNumber < Zero)
+            //TODO fix extractor
+            if (firstNumber < 0 && secondNumber < 0)
             {
                 throw new Exception("Error, incorrect data.Input number more than 0");
             }

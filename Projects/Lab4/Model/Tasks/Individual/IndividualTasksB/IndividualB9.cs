@@ -17,6 +17,8 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         {
             return "The program writes the number in English (Russian) words:";
         }
+
+        //TODO replace concat
         public static string IndividualTaskB9(int number)
         {
             Dictionary<int, string> dictYears = new Dictionary<int, string>
@@ -27,21 +29,20 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             };
             const int Hundred = 100,
                 Twenty = 20,
-                Ten = 10,
-                Zero = 0;
+                Ten = 10;
             string resValue = "";
-            if (number / Hundred > Zero && number / Hundred < Ten)// from 100 to 999
+            if (number / Hundred > 0 && number / Hundred < Ten)// from 100 to 999
             {
                 int hundreds = number / Hundred;
                 int remains = number % Hundred;
                 resValue += dictYears[hundreds] + " " + dictYears[Hundred];
-                if (remains / Ten > Zero && remains > Twenty)// from 20 to 100
+                if (remains / Ten > 0 && remains > Twenty)// from 20 to 100
                 {
                     int ten = remains / Ten;
                     int digit = remains % Ten;
                     resValue += " " + dictYears[ten * Ten] + " " + dictYears[digit];
                 }
-                else if (remains >= Zero)// from 0 to 20
+                else if (remains >= 0)// from 0 to 20
                 {
                     resValue += " " + dictYears[remains];
                 }
@@ -50,13 +51,13 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                     throw new Exception("Error, program was broken.Transfer number from 0 to 999");
                 }
             }
-            else if (number / Ten > Zero && number > Twenty)// from 20 to 100
+            else if (number / Ten > 0 && number > Twenty)// from 20 to 100
             {
                 int tens = number / Ten;
                 int digit = number % Ten;
                 resValue = dictYears[tens * Ten] + " " + dictYears[digit];
             }
-            else if (number >= Zero)// from 0 to 20
+            else if (number >= 0)// from 0 to 20
             {
                 resValue = dictYears[number];
             }

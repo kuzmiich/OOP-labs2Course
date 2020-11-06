@@ -17,10 +17,9 @@ namespace Lab4.Model.Tasks.Common
         }
         private static bool IsDivider(int[] listDividers, int number)
         {
-            const int ZERO = 0;
             foreach (var el in listDividers)
             {
-                if (number % el == ZERO)
+                if (number % el == 0)
                 {
                     return true;
                 }

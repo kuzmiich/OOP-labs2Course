@@ -42,7 +42,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             }
             return resYear;
         }
-        //
+        //TODO Replace const
         public static string IndividualTaskB4(int year)
         {
             Dictionary<int, string> dictYears = new Dictionary<int, string>

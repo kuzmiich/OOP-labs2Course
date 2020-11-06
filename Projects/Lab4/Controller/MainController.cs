@@ -36,7 +36,15 @@ namespace Lab4.Controller
                 ITask currentRunTask = GetTaskByIndex(key-1);
                 if (currentRunTask != null)
                 {
-                    string taskResultString = currentRunTask.Run();
+                    string taskResultString = string.Empty;
+                    try
+                    {
+                        taskResultString = currentRunTask.Run();
+                    }
+                    catch (Exception ex)
+                    {
+                        taskResultString = ex.Message;
+                    }
                     Output.ShowMessage(taskResultString);
                 }
                 else

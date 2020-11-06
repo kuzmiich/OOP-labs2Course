@@ -10,11 +10,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1;
             int[] arrValue = extract.IndividualB8();
-            int day = arrValue[Zero],
-                mounth = arrValue[One];
+            int day = arrValue[0],
+                mounth = arrValue[1];
             return IndividualTaskB8(day, mounth);
         }
         public string GetInfo()
