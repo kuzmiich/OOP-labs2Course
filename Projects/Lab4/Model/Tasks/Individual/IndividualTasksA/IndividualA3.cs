@@ -1,15 +1,20 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksA
 {
-    class IndividualA3
+    class IndividualA3 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskA3(extract.IndividualA3());
+        }
+        public string GetInfo()
+        {
+            return "Emulates the user's mood.Two six-sided dice (dice) are thrown and the total amount of points that fell on the first and second dice is calculated:";
         }
         private static string BadMood()
         {

@@ -1,86 +1,35 @@
 ﻿using System;
-using Lab4.Views;
 
 namespace Lab4.Utils.MyConverter
 {
-    public class Converter : IConverter
+    public class Converter
     {
         public static int[] ConvertToArrayInt(string value)
         {
-            int[] res;
-            try
-            {
-                res = Array.ConvertAll(value.Split(), int.Parse);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
+            int[] res = Array.ConvertAll(value.Split(), int.Parse);
             return res;
         }
         public static int ConvertToChar(char letter)
         {
-            char res = ' ';
-            try
-            {
-                res = Convert.ToChar(letter);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
-            return res;
+            return letter;
         }
         public static char ConvertToChar(int letter)
         {
-            char res;
-            try
-            {
-                res = Convert.ToChar(letter);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
-            return res;
+            return (char)letter;
         }
         public static int ConvertToInt(string value)
         {
-            int res = 0;
-            try
-            {
-                res = Convert.ToInt32(value);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
+            int.TryParse(value, out int res);
             return res;
         }
         public static uint ConvertToUInt(string value)
         {
-            uint res = 0;
-            try
-            {
-                res = Convert.ToUInt32(value);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
+            uint.TryParse(value, out uint res);
             return res;
         }
         public static double ConvertToDouble(string value)
         {
-            double res = 0;
-            try
-            {
-                res = Convert.ToDouble(value);
-            }
-            catch (FormatException ex)
-            {
-                throw new FormatException(ex.Message);
-            }
+            double.TryParse(value, out double res);
             return res;
         }
     }

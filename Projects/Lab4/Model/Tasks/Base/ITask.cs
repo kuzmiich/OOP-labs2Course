@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Lab4.Model.Tasks.Base
+﻿namespace Lab4.Model.Tasks.Base
 {
     public interface ITask
     {

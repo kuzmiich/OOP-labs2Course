@@ -1,15 +1,20 @@
-﻿using System;
+﻿using Lab4.Model.Tasks.Base;
 using Lab4.Utils;
 using Lab4.Views;
+using System;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB2
+    class IndividualB2 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskB2(extract.IndividualB2());
+        }
+        public string GetInfo()
+        {
+            return "An application that outputs a string describing the score corresponding to the number M:";
         }
         public static string IndividualTaskB2(int mark)
         {

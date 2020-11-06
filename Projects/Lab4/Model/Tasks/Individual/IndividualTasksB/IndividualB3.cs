@@ -1,11 +1,12 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 using System.Collections.Generic;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB3
+    class IndividualB3 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -16,6 +17,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             int indexAdvantage = arrValue[Zero],
                 indexSuits = arrValue[One];
             return IndividualTaskB3(indexAdvantage, indexSuits);
+        }
+        public string GetInfo()
+        {
+            return "Displays the name of the corresponding card in the form: six of diamonds, queen of hearts, ace of clubs, etc:";
         }
         public static string IndividualTaskB3(int indexAdvantage, int indexSuits)
         {

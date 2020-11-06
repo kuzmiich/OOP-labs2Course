@@ -24,11 +24,11 @@ namespace Lab4.Utils
         {
 
         }
-        public string InputString()
+        public string GetString()
         {
             return Console.ReadLine();
         }
-        public char GetUserInputLetter()
+        public char GetLetter()
         {
             return Convert.ToChar(Console.Read());
         }

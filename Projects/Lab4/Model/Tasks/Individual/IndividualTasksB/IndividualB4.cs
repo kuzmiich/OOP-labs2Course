@@ -1,16 +1,21 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 using System.Collections.Generic;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB4
+    class IndividualB4 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskB4(extract.IndividualB4());
+        }
+        public string GetInfo()
+        {
+            return "Displays a string describing the specified age, ensuring that the number matches the word \'year\' correctly:";
         }
         private static string addEnding(int year, string stringNumber)
         {

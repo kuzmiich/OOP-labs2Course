@@ -1,10 +1,11 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksA
 {
-    class IndividualA4
+    class IndividualA4 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -15,6 +16,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
             int firstNumber = arrValue[Zero];
             int secondNumber = arrValue[One];
             return IndividualTaskA4(firstNumber, secondNumber);
+        }
+        public string GetInfo()
+        {
+            return "Emulated the Dice game:";
         }
         // Individual A4 - Dice
         public static string IndividualTaskA4(int firstNumber, int secondNumber)

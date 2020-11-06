@@ -1,11 +1,12 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Utils.MyConverter;
 using Lab4.Views;
 using System;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB7
+    class IndividualB7 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -18,6 +19,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             int number1 = arrValue[One],
                 number2 = arrValue[Two];
             return IndividualTaskB7(operation, number1, number2);
+        }
+        public string GetInfo()
+        {
+            return "A program that accepts an operation and two real numbers from the user, and then performs the specified action on these numbers and outputs the result";
         }
         public static string IndividualTaskB7(char operation, int number1, int number2)
         {

@@ -2,7 +2,7 @@
 {
     public interface IInputService
     {
-        string InputString();
-        char GetUserInputLetter();
+        string GetString();
+        char GetLetter();
     }
 }

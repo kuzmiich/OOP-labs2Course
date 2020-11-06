@@ -1,16 +1,21 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 using System.Collections.Generic;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB6
+    class IndividualB6 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskB6(extract.IndividualB6());
+        }
+        public string GetInfo()
+        {
+            return "Displays the name of the corresponding time of year according to the day of the month:";
         }
         public static string IndividualTaskB6(int numberMounth)
         {

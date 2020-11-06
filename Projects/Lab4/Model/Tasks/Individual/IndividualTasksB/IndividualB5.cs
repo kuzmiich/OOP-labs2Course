@@ -1,9 +1,10 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB5
+    class IndividualB5 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -14,6 +15,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             uint year = arrValue[Zero],
                 mounth = arrValue[One];
             return IndividualTaskB5(year, mounth);
+        }
+        public string GetInfo()
+        {
+            return "Defines the number of days in this month for a non-leap year:";
         }
         // count of day in mount for not a leap year
         private static bool IsLeep(uint year)
@@ -40,7 +45,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             }
             return isLeep;
         }
-        public static string IndividualTaskB5(uint year, uint mounth)
+        public static string IndividualTaskB5(uint mounth, uint year)
         {
             uint[] arrCountDayInMounth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             string resData = "";
@@ -50,7 +55,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             }
             else
             {
-                resData = $"In {mounth} mounth - { arrCountDayInMounth[mounth] } days";
+                resData = $"In {mounth} mounth - { arrCountDayInMounth[--mounth] } days";
             }
             return resData;
         }

@@ -1,16 +1,21 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
 using System.Collections.Generic;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksA
 {
-    class IndividualA2
+    class IndividualA2 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskA2(extract.IndividualA2());
+        }
+        public string GetInfo()
+        {
+            return "Determined whether the entered letter is a vowel or consonant.";
         }
         private static string IsVowel1(char letter)
         {

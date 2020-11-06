@@ -1,12 +1,11 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB8
+    class IndividualB8 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -17,6 +16,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             int day = arrValue[Zero],
                 mounth = arrValue[One];
             return IndividualTaskB8(day, mounth);
+        }
+        public string GetInfo()
+        {
+            return "A program that outputs the Zodiac sign corresponding to this date: \"Aquarius\" (20.1-18.2):";
         }
         public static string IndividualTaskB8(int day, int mounth)
         {
@@ -68,7 +71,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                 default:
                     throw new Exception("Error, incorrect data");
             }
-            return zodiacSign;
+            return "The zodiac sign is - " + zodiacSign;
         }
     }
 }

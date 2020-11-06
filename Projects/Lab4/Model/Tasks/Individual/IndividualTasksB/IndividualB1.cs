@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Lab4.Model.Tasks.Base;
 using Lab4.Utils;
 using Lab4.Views;
-
+using System;
+using System.Collections.Generic;
 namespace Lab4.Model.Tasks.Individual.IndividualTasksB
 {
-    class IndividualB1
+    class IndividualB1 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return IndividualTaskB1(extract.IndividualB1());
+        }
+        public string GetInfo()
+        {
+            return "A program that displays the name of the corresponding day of the week according to the number:";
         }
         public static string IndividualTaskB1(int dayOfWeek)
         {

@@ -1,14 +1,19 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 
 namespace Lab4.Model.Tasks.Common
 {
-    class Common2
+    class Common2 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return CommonTask2(extract.Common2());
+        }
+        public string GetInfo()
+        {
+            return "Determines which of the four etc. values entered by the user is the largest (smallest):";
         }
         // The Greatest
         private static bool isAllValuesEquel(int[] numbers)

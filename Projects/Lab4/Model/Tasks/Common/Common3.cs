@@ -1,14 +1,19 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 
 namespace Lab4.Model.Tasks.Common
 {
-    class Common3
+    class Common3 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return CommonTask3(extract.Common3());
+        }
+        public string GetInfo()
+        {
+            return "Determine whether a given number is a multiple of the corresponding numbers 2, 3, 5, 7, 11, 13, 17 and 19.";
         }
         private static bool IsDivider(int[] listDividers, int number)
         {

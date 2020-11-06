@@ -1,9 +1,10 @@
-﻿using Lab4.Utils;
+﻿using Lab4.Model.Tasks.Base;
+using Lab4.Utils;
 using Lab4.Views;
 
 namespace Lab4.Model.Tasks.Additional
 {
-    class Additional
+    class Additional1 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -16,6 +17,10 @@ namespace Lab4.Model.Tasks.Additional
                 mounth = arrValue[One],
                 year = arrValue[Two];
             return AdditionalTask1(day, mounth, year);
+        }
+        public string GetInfo()
+        {
+            return "Specifies the date of the next day:";
         }
         private static bool IsLeep(int year)
         {
@@ -44,30 +49,31 @@ namespace Lab4.Model.Tasks.Additional
         public static string AdditionalTask1(int day, int mounth, int year)//fix
         {
             int[] arrCountDayInMounth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-            const int TWELVE = 12, ONE = 1;
-
+            const int Twelve = 12,
+                Thirteen = 13,
+                One = 1;
+            // check is leep
             if (IsLeep(year))
             {
-                arrCountDayInMounth[ONE]++;
+                arrCountDayInMounth[One]++;
             }
-
             int i;
-            for (i = 0; i < TWELVE; i++)
+            for (i = 0; i < Twelve; i++)
             {
-                if (++i == mounth & day == arrCountDayInMounth[i])
+                if (++i == mounth && day == arrCountDayInMounth[i])
                 {
-                    day = ONE;
+                    day = One;
                     mounth++;
                     break;
                 }
             }
-            if (i == TWELVE)
+            if (i == Twelve)
             {
                 day++;
             }
-            if (mounth == TWELVE + ONE)
+            if (mounth == Thirteen)
             {
-                mounth = ONE;
+                mounth = One;
                 year++;
             }
             return day + " " + mounth + " " + year;

@@ -5,12 +5,16 @@ using System;
 
 namespace Lab4.Model.Tasks.Common
 {
-    public class Common1 : ITask
+    public class Common1 : ITask, ITaskInfo
     {
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
             return CommonTask1(extract.Common1());
+        }
+        public string GetInfo() 
+        {
+            return "Count of dragon heads and eyes:";
         }
         // Define count of dragon heads and eyes
         public static string CommonTask1(int year)

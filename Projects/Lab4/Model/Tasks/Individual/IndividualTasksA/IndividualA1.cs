@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Lab4.Model.Tasks.Base;
 using Lab4.Utils;
 using Lab4.Views;
+using System;
 
 namespace Lab4.Model.Tasks.Individual.IndividualTasksA
 {
-    class IndividualA1
+    class IndividualA1 : ITask, ITaskInfo
     {
         public string Run()
         {
@@ -15,6 +16,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
             double bSide = arrValue[One];
             double cSide = arrValue[Two];
             return IndividualTaskA1(aSide, bSide, cSide);
+        }
+        public string GetInfo()
+        {
+            return "Determines whether the given sides are sides of a triangle.";
         }
         // Individual A1
         private static bool IsTriangle(double a, double b, double c)
@@ -30,8 +35,8 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         }
         public static string IndividualTaskA1(double aSide, double bSide, double cSide)
         {
-            const double ZERO = 0;
-            if (aSide < ZERO || bSide < ZERO || cSide < ZERO)
+            const double Zero = 0;
+            if (aSide < Zero || bSide < Zero || cSide < Zero)
             {
                 throw new Exception("Error, incorrect data.Transfer number more than 0");
             }
