@@ -11,26 +11,25 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1,
-                Two = 2;
+
             int[] arrValue = extract.IndividualB7();
-            char operation = Converter.ConvertToChar(arrValue[Zero]);
-            int number1 = arrValue[One],
-                number2 = arrValue[Two];
+            string operation = arrValue[0].ToString();
+            int number1 = arrValue[1],
+                number2 = arrValue[2];
             return IndividualTaskB7(operation, number1, number2);
         }
         public string GetInfo()
         {
             return "A program that accepts an operation and two real numbers from the user, and then performs the specified action on these numbers and outputs the result";
         }
-        public static string IndividualTaskB7(char operation, int number1, int number2)
+        //TODO Replace with Dictionary<string, Func<int,int,string>>
+        public static string IndividualTaskB7(string operation, int number1, int number2)
         {
-            const char Plus = '+',
-                Minus = '-',
-                Pow = '*',
-                Division = '/',
-                DivisionRemainder = '%';
+            const string Plus = "+",
+                Minus = "-",
+                Pow = "*",
+                Division = "/",
+                DivisionRemainder = "%";
             double resNumber = 0;
             switch (operation)
             {
@@ -44,24 +43,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                     resNumber = number1 * number2;
                     break;
                 case Division:
-                    try
-                    {
-                        resNumber = number1 / number2;
-                    }
-                    catch (DivideByZeroException ex)
-                    {
-                        throw new Exception(ex.Message);
-                    }
+                     resNumber = number1 / number2;
                     break;
                 case DivisionRemainder:
-                    try
-                    {
-                        resNumber = number1 % number2;
-                    }
-                    catch (DivideByZeroException ex)
-                    {
-                        throw new Exception(ex.Message);
-                    }
+                    resNumber = number1 % number2;
                     break;
                 default:
                     break;

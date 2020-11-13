@@ -1,6 +1,7 @@
 ﻿using Lab4.Model.Tasks.Base;
 using Lab4.Utils;
 using Lab4.Views;
+using System.Linq;
 
 namespace Lab4.Model.Tasks.Common
 {
@@ -15,23 +16,11 @@ namespace Lab4.Model.Tasks.Common
         {
             return "Determine whether a given number is a multiple of the corresponding numbers 2, 3, 5, 7, 11, 13, 17 and 19.";
         }
-        private static bool IsDivider(int[] listDividers, int number)
-        {
-            const int ZERO = 0;
-            foreach (var el in listDividers)
-            {
-                if (number % el == ZERO)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
         // The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19:
         public static string CommonTask3(int number)
         {
             int[] listDividers = new int[] { 2, 3, 5, 7, 11, 13, 17, 19 };
-            return "The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17 и 19 - " + IsDivider(listDividers, number);
+            return $"The number is a multiple of numbers: 2, 3, 5, 7, 11, 13, 17, 19 = { listDividers.Any(n => number % n == 0)}";
         }
     }
 }

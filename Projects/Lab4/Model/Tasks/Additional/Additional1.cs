@@ -24,35 +24,33 @@ namespace Lab4.Model.Tasks.Additional
         }
         private static bool IsLeep(int year)
         {
-            const int Zero = 0,
-                Four = 4,
+            int Four = 4,
                 Hundred = 100,
                 FourHundred = 400;
             bool isLeep = false;
             // leep
-            if (year % Four == Zero)
+            if (year % Four == 0)
             {
                 isLeep = true;
             }
             // not leep
-            else if (year % Four == Zero && year % Hundred == Zero)
+            else if (year % Four == 0 && year % Hundred == 0)
             {
                 isLeep = false;
             }
             // leep
-            else if (year % Four == Zero && year % Hundred == Zero && year % FourHundred == Zero)
+            else if (year % Four == 0 && year % Hundred == 0 && year % FourHundred == 0)
             {
                 isLeep = true;
             }
             return isLeep;
         }
-        public static string AdditionalTask1(int day, int mounth, int year)//fix
+        public static string AdditionalTask1(int day, int mounth, int year)
         {
             int[] arrCountDayInMounth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             const int Twelve = 12,
                 Thirteen = 13,
                 One = 1;
-            // check is leep
             if (IsLeep(year))
             {
                 arrCountDayInMounth[One]++;
@@ -76,7 +74,7 @@ namespace Lab4.Model.Tasks.Additional
                 mounth = One;
                 year++;
             }
-            return day + " " + mounth + " " + year;
+            return $"{day} {mounth} {year}";
         }
     }
 }

@@ -10,11 +10,10 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0, One = 1, Two = 2;
             double[] arrValue = extract.IndividualA1();
-            double aSide = arrValue[Zero];
-            double bSide = arrValue[One];
-            double cSide = arrValue[Two];
+            double aSide = arrValue[0];
+            double bSide = arrValue[1];
+            double cSide = arrValue[2];
             return IndividualTaskA1(aSide, bSide, cSide);
         }
         public string GetInfo()
@@ -22,23 +21,16 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
             return "Determines whether the given sides are sides of a triangle.";
         }
         // Individual A1
+        //TODO FIX LOGIC
         private static bool IsTriangle(double a, double b, double c)
         {
-            if (c > a && a > b && c < a + b && c > a - b)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return a + b > c || b + c > a || a + c > b;
         }
         public static string IndividualTaskA1(double aSide, double bSide, double cSide)
         {
-            const double Zero = 0;
-            if (aSide < Zero || bSide < Zero || cSide < Zero)
+            if (aSide < 0 || bSide < 0 || cSide < 0)
             {
-                throw new Exception("Error, incorrect data.Transfer number more than 0");
+                throw new ArgumentException("Error, incorrect data.Transfer number more than 0");
             }
             return "Is these sides are sides of a triangle - " + IsTriangle(aSide, bSide, cSide);
         }

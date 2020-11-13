@@ -1,6 +1,7 @@
 ﻿using Lab4.Model.Tasks.Base;
 using Lab4.Utils;
 using Lab4.Views;
+using System.Linq;
 
 namespace Lab4.Model.Tasks.Common
 {
@@ -15,48 +16,14 @@ namespace Lab4.Model.Tasks.Common
         {
             return "Determines which of the four etc. values entered by the user is the largest (smallest):";
         }
-        // The Greatest
-        private static bool isAllValuesEquel(int[] numbers)
-        {
-            bool flag = false;
-            const int Zero = 0;
-            for (int i = 1; i < numbers.Length; i++)
-            {
-
-                if (numbers[Zero] == numbers[i])
-                {
-                    flag = true;
-                }
-                else
-                {
-                    flag = false;
-                    break;
-                    // return false;
-                }
-            }
-            return flag;
-        }
         public static string CommonTask2(int[] numbers)
         {
             string resValue = "";
-            const int Zero = 0;
-            if (isAllValuesEquel(numbers))
+            if (numbers.All(x => x == numbers[0]))
             {
-                resValue = "All values are equal.";
+                return "All values are equal.";
             }
-            int max = numbers[Zero], min = numbers[Zero];
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] > max)
-                {
-                    max = numbers[i];
-                }
-                else if (numbers[i] < min)
-                {
-                    min = numbers[i];
-                }
-            }
-            resValue = $"Max = {max}, Min = {min}";
+            resValue = $"Max = {numbers.Max()}, Min = {numbers.Min()}";
             return resValue;
         }
     }

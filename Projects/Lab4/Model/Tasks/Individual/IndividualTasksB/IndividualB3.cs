@@ -37,12 +37,12 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                 { 8, "Eight"},
                 { 9, "Nine"},
                 { 10, "Ten"},
-                { 11, "Eleven"},
-                { 12, "twelve"},
-                { 13, "thirteen"},
-                { 14, "Chetyrnadcati"},
+                { 11, "Jack"},
+                { 12, "Queen"},
+                { 13, "King"},
+                { 14, "Ace"},
             };
-            const int StartKeyAdvantage = 6,
+            int StartKeyAdvantage = 6,
                 StartKeySuits = 1;
             int countCardAdvantage = cardAdvantage.Count,
                 countCardSuits = cardSuits.Count;
@@ -51,7 +51,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             {
                 throw new Exception("Error, invalid data.Transfer data from 0 to 10");
             }
-            return cardAdvantage[indexAdvantage + StartKeyAdvantage] + " " + cardSuits[indexSuits + StartKeySuits];
+            return $"{cardAdvantage[indexAdvantage + StartKeyAdvantage]} {cardSuits[indexSuits + StartKeySuits]}";
         }
     }
 }

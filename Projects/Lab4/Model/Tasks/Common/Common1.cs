@@ -16,14 +16,18 @@ namespace Lab4.Model.Tasks.Common
         {
             return "Count of dragon heads and eyes:";
         }
+        private static int countEyes(int head)
+        {
+            return head * 2;
+        }
         // Define count of dragon heads and eyes
         public static string CommonTask1(int year)
         {
-            const int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
-            const int zeroYear = 0, TwoHundredYear = 200, TreeHundredYear = 300;
+            int startHead = 3, CoefUpTwoHundred = 3, CoefUpTreeHundred = 2;
+            int TwoHundredYear = 200, TreeHundredYear = 300;
 
             int head;
-            if (year < TwoHundredYear && year > zeroYear)
+            if (year < TwoHundredYear && year > 0)
             {
                 head = year * CoefUpTwoHundred + startHead;
             }
@@ -37,10 +41,9 @@ namespace Lab4.Model.Tasks.Common
             }
             else
             {
-                throw new Exception("Error, incorrect data, input number more than 0.");
+                throw new ArgumentException("Error, incorrect data, input number more than 0.");
             }
-            int eyes = head * 2;
-            return $"Count heads = {head}, count eyes = {eyes}";
+            return $"Count heads = {head}, count eyes = {countEyes(head)}";
         }
     }
 }

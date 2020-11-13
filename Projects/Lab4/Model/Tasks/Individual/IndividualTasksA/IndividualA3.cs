@@ -7,6 +7,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
 {
     class IndividualA3 : ITask, ITaskInfo
     {
+        public static string BadMood { get; } = "͡Ò﹏Ó";
+        public static string GoodMood { get; } = "¯＼_(ツ)_/¯";
+        public static string PerfectMood { get; } = "(o˘◡˘o)";
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
@@ -16,40 +19,26 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         {
             return "Emulates the user's mood.Two six-sided dice (dice) are thrown and the total amount of points that fell on the first and second dice is calculated:";
         }
-        private static string BadMood()
-        {
-            return "͡Ò﹏Ó";
-        }
-        private static string GoodMood()
-        {
-            return "¯＼_(ツ)_/¯";
-        }
-        private static string PerfectMood()
-        {
-            return "(o˘◡˘o)";
-        }
+
         // Individual A3 - Mood sensor
         public static string IndividualTaskA3(int mood)
         {
-            string smile = "";
-            const int Zero = 0,
-                ThirtyThree = 33,
-                SixtySix = 66;
-            if (mood >= Zero && mood < ThirtyThree)
+            string smile = string.Empty;
+            if (mood >= 0 && mood < 33)
             {
-                smile = BadMood();
+                smile = BadMood;
             }
-            else if (mood >= ThirtyThree && mood < SixtySix)
+            else if (mood >= 33 && mood < 66)
             {
-                smile = GoodMood();
+                smile = GoodMood;
             }
-            else if (mood >= SixtySix)
+            else if (mood >= 66)
             {
-                smile = PerfectMood();
+                smile = PerfectMood;
             }
             else
             {
-                throw new Exception("Error, program was broken.Transfer number from 0 to 100");
+                throw new ArgumentException("Error. Transfer number from 0 to 100");
             }
             return smile;
         }

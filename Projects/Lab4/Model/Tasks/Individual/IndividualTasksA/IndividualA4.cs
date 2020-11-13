@@ -10,11 +10,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1;
             int[] arrValue = extract.IndividualA4();
-            int firstNumber = arrValue[Zero];
-            int secondNumber = arrValue[One];
+            int firstNumber = arrValue[0];
+            int secondNumber = arrValue[1];
             return IndividualTaskA4(firstNumber, secondNumber);
         }
         public string GetInfo()
@@ -24,10 +22,9 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksA
         // Individual A4 - Dice
         public static string IndividualTaskA4(int firstNumber, int secondNumber)
         {
-            const double Zero = 0;
-            if (firstNumber < Zero && secondNumber < Zero)
+            if (firstNumber < 0 && secondNumber < 0)
             {
-                throw new Exception("Error, incorrect data.Input number more than 0");
+                throw new ArgumentException("Error, incorrect data.Input number more than 0");
             }
             return $"On the first die, it fell out - {firstNumber}\nOn the second die, it fell out - {secondNumber}\nResult = {firstNumber + secondNumber}";
         }
