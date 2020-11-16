@@ -42,16 +42,16 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                 { 13, "King"},
                 { 14, "Ace"},
             };
-            int StartKeyAdvantage = 6,
-                StartKeySuits = 1;
+            const int START_KEY_ADVANTAGE = 6,
+                      START_KEY_SUITS = 1;
             int countCardAdvantage = cardAdvantage.Count,
                 countCardSuits = cardSuits.Count;
-            if (indexAdvantage < StartKeyAdvantage && indexAdvantage > countCardAdvantage ||
-                indexSuits < StartKeySuits && indexSuits > countCardSuits)
+            if (indexAdvantage < START_KEY_ADVANTAGE && indexAdvantage > countCardAdvantage ||
+                indexSuits < START_KEY_SUITS && indexSuits > countCardSuits)
             {
                 throw new Exception("Error, invalid data.Transfer data from 0 to 10");
             }
-            return $"{cardAdvantage[indexAdvantage + StartKeyAdvantage]} {cardSuits[indexSuits + StartKeySuits]}";
+            return $"{cardAdvantage[indexAdvantage + START_KEY_ADVANTAGE]} {cardSuits[indexSuits + START_KEY_SUITS]}";
         }
     }
 }

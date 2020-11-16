@@ -75,6 +75,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                 throw new Exception("Error, incorrect data");
             }
             return "The zodiac sign is - " + zodiacSign;
+            
         }
     }
 }

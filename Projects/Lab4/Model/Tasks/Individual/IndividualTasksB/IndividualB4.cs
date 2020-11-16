@@ -17,7 +17,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         {
             return "Displays a string describing the specified age, ensuring that the number matches the word \'year\' correctly:";
         }
-        private static string addEnding(int year, string stringNumber)
+        private static string AddEnding(int year, string stringNumber)
         {
             int lower = 1,
                 upper = 4,
@@ -51,25 +51,21 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
                 { 10, "ten"}, { 11, "eleven" }, { 12, "twelve" }, { 13, "thirteen"}, { 14, "fourteen"}, { 15, "fifteen" }, { 16, "sixteen" }, { 17, "seventeen"}, { 18, "eighteen"}, { 19, "nineteen"},
                 { 20, "twenty"}, { 30, "thirty" }, { 40, "forty" }, { 50, "fifty" }, { 60, "sixty"}, { 70, "seventy" }, { 80, "eighty" }, { 90, "nineteen" }, { 100, "hundred" }
             };
-            const int Hundred = 100,
-                Twenty = 20,
-                Ten = 10,
-                Zero = 0;
             string stringNumber = "";
             // hundred
-            if (year / Hundred > Zero && year / Hundred < Ten)
+            if (year / 100 > 0 && year / 100 < 10)
             {
-                int hundreds = year / Hundred;
-                int tens = year % Hundred;
-                stringNumber += dictYears[hundreds] + " " + dictYears[Hundred] + " " + dictYears[tens];
+                int hundreds = year / 100;
+                int tens = year % 100;
+                stringNumber += $"{dictYears[hundreds]} {dictYears[100]} {dictYears[tens]}";
             }
-            else if (year / Ten > Zero && year > Twenty)
+            else if (year / 10 > 0 && year > 20)
             {
-                int tens = year / Ten;
-                int digit = year % Ten;
-                stringNumber += dictYears[tens * Ten] + " " + dictYears[digit];
+                int tens = year / 10;
+                int digit = year % 10;
+                stringNumber += $"{dictYears[tens * 10]} {dictYears[digit]}";
             }
-            else if (year >= Zero)// from 0 to 20
+            else if (year >= 0)// from 0 to 20
             {
                 stringNumber = dictYears[year];
             }
@@ -77,7 +73,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             {
                 throw new Exception("Error, program was broken.Transfer number from 0 to 120");
             }
-            return addEnding(year, stringNumber);
+            return AddEnding(year, stringNumber);
         }
     }
 }

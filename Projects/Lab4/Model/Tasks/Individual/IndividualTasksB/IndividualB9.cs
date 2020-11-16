@@ -53,7 +53,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             {
                 int tens = number / Ten;
                 int digit = number % Ten;
-                resValue = $"{dictYears[tens * Ten]} {dictYears[digit]} ";
+                resValue = $"{dictYears[tens * Ten]} {dictYears[digit]}";
             }
             else if (number >= 0)// from 0 to 20
             {

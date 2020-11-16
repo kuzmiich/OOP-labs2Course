@@ -25,27 +25,27 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
         //TODO Replace with Dictionary<string, Func<int,int,string>>
         public static string IndividualTaskB7(string operation, int number1, int number2)
         {
-            const string Plus = "+",
-                Minus = "-",
-                Pow = "*",
-                Division = "/",
-                DivisionRemainder = "%";
+            const string PLUS = "+",
+                MINUS = "-",
+                POW = "*",
+                DIVISION = "/",
+                DIVISION_REMAINDER = "%";
             double resNumber = 0;
             switch (operation)
             {
-                case Plus:
+                case PLUS:
                     resNumber = number1 + number2;
                     break;
-                case Minus:
+                case MINUS:
                     resNumber = number1 - number2;
                     break;
-                case Pow:
+                case POW:
                     resNumber = number1 * number2;
                     break;
-                case Division:
+                case DIVISION:
                      resNumber = number1 / number2;
                     break;
-                case DivisionRemainder:
+                case DIVISION_REMAINDER:
                     resNumber = number1 % number2;
                     break;
                 default:
