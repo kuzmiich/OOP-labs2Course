@@ -9,13 +9,10 @@ namespace Lab4.Model.Tasks.Additional
         public string Run()
         {
             ExtractForTasks extract = new ExtractForTasks(InputService.GetInstance(), OutputService.GetInstance());
-            const int Zero = 0,
-                One = 1,
-                Two = 2;
             int[] arrValue = extract.Additional1();
-            int day = arrValue[Zero],
-                mounth = arrValue[One],
-                year = arrValue[Two];
+            int day = arrValue[0],
+                mounth = arrValue[1],
+                year = arrValue[2];
             return AdditionalTask1(day, mounth, year);
         }
         public string GetInfo()
@@ -24,22 +21,19 @@ namespace Lab4.Model.Tasks.Additional
         }
         private static bool IsLeep(int year)
         {
-            int Four = 4,
-                Hundred = 100,
-                FourHundred = 400;
             bool isLeep = false;
             // leep
-            if (year % Four == 0)
+            if (year % 4 == 0)
             {
                 isLeep = true;
             }
             // not leep
-            else if (year % Four == 0 && year % Hundred == 0)
+            else if (year % 4 == 0 && year % 100 == 0)
             {
                 isLeep = false;
             }
             // leep
-            else if (year % Four == 0 && year % Hundred == 0 && year % FourHundred == 0)
+            else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
             {
                 isLeep = true;
             }
