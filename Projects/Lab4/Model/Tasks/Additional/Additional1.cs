@@ -42,30 +42,28 @@ namespace Lab4.Model.Tasks.Additional
         public static string AdditionalTask1(int day, int mounth, int year)
         {
             int[] arrCountDayInMounth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-            const int Twelve = 12,
-                Thirteen = 13,
-                One = 1;
+            const int COUNT_MOUNTH = 12;
             if (IsLeep(year))
             {
-                arrCountDayInMounth[One]++;
+                arrCountDayInMounth[1]++;
             }
             int i;
-            for (i = 0; i < Twelve; i++)
+            for (i = 0; i < COUNT_MOUNTH; i++)
             {
                 if (++i == mounth && day == arrCountDayInMounth[i])
                 {
-                    day = One;
+                    day = 1;
                     mounth++;
                     break;
                 }
             }
-            if (i == Twelve)
+            if (i == COUNT_MOUNTH)
             {
                 day++;
             }
-            if (mounth == Thirteen)
+            else if (mounth == COUNT_MOUNTH + 1)
             {
-                mounth = One;
+                mounth = 1;
                 year++;
             }
             return $"{day} {mounth} {year}";
