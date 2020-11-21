@@ -38,7 +38,7 @@ namespace Lab4.Model.Tasks.Individual.IndividualTasksB
             }
             else
             {
-                throw new Exception();
+                throw new Exception("Error");
             }
             return resYear;
         }
