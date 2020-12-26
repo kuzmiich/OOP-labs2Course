@@ -1,6 +1,6 @@
-﻿using Lab6.Utils;
+﻿using Lab5.Utils;
 
-namespace Lab6.Interfaces
+namespace Lab5.Interfaces
 {
     public interface ITaskResult
     {

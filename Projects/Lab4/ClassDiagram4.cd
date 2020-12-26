@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab4.Program">
+    <Position X="6.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab4.Controller.MainController">
+    <Position X="11.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAIBAAAEAABAAAACAAIAAAAAAA=</HashCode>
+      <FileName>Controller\MainController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Additional.Additional1" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Additional\Additional1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Common.Common1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Common\Common1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Common.Common2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Common\Common2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Common.Common3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Common\Common3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.19" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA1" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAEAAAAAAAAQAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksA\IndividualA1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA2" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAgAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAII=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksA\IndividualA2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA3" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABAAAAAAAAAAAAAAAAAAAgAEAAAAAAAAEAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksA\IndividualA3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA4" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAIAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksA\IndividualA4.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA5" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksA\IndividualA5.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAQAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB4" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAEAAAAAAIAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB4.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB5" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB5.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB6" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB6.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB7" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB7.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB8" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB8.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksB.IndividualB9" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAABAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Individual\IndividualTasksB\IndividualB9.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab4.Views.OutputService">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\OutputService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab4.Utils.MyConverter.Converter">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAFAAAAgAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
+      <FileName>Utils\Converter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab4.Utils.ExtractForTasks" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AOAAAMEAAIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Utils\ExtractForTasks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab4.Utils.InputService" Collapsed="true">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAABAAABAAIAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Utils\InputService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Lab4.Model.Tasks.Base.ITask">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Model\Tasks\Base\ITask.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab4.Model.Tasks.Base.ITaskInfo">
+    <Position X="1" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Tasks\Base\ITaskInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab4.Views.IOutputService">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\IOutputService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab4.Utils.IInputService" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Utils\IInputService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

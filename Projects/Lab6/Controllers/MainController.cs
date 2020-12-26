@@ -1,10 +1,10 @@
-﻿using Lab6.Interfaces;
-using Lab6.Utils;
+﻿using Lab5.Interfaces;
+using Lab5.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lab6.Controllers
+namespace Lab5.Controllers
 {
     public class MainController
     {

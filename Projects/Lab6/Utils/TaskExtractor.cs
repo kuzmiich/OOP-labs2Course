@@ -1,8 +1,8 @@
-﻿using Lab6.Interfaces;
+﻿using Lab5.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace Lab6.Utils
+namespace Lab5.Utils
 {
     public class TaskExtractor
     {

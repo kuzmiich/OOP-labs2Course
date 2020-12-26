@@ -1,4 +1,4 @@
-﻿namespace Lab6.Interfaces
+﻿namespace Lab5.Interfaces
 {
     public interface IInputService
     {

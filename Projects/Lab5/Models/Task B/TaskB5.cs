@@ -1,8 +1,8 @@
-﻿using Lab6.Interfaces;
-using Lab6.Utils;
+﻿using Lab5.Interfaces;
+using Lab5.Utils;
 using System;
 
-namespace Lab6.Models.Task_B
+namespace Lab5.Models.Task_B
 {
     public class TaskB5 : ITaskResult, ITaskInfo
     {

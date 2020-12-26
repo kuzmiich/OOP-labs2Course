@@ -1,9 +1,9 @@
-﻿using Lab6.Interfaces;
-using Lab6.Utils;
+﻿using Lab5.Interfaces;
+using Lab5.Utils;
 using System;
 using System.Collections.Generic;
 
-namespace Lab6.Models.Task_D
+namespace Lab5.Models.Task_D
 {
     public class TaskD1 : ITaskResult, ITaskInfo
     {
