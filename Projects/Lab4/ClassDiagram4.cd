@@ -6,13 +6,35 @@
       <HashCode>AAAQAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAA=</HashCode>
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputService" />
+      <Field Name="_mainController" />
+      <Field Name="_outputService" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Lab4.Controller.MainController">
-    <Position X="11.25" Y="5.25" Width="1.75" />
+    <Position X="11.75" Y="2.75" Width="1.75" />
+    <AssociationLine Name="Output" Type="Lab4.Views.IOutputService">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.073" Y="0.036" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Tasks" Type="Lab4.Model.Tasks.Base.ITask">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.705" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAIBAAAEAABAAAACAAIAAAAAAA=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Input" />
+      <Property Name="Output" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tasks" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Lab4.Model.Tasks.Additional.Additional1" Collapsed="true">
     <Position X="0.5" Y="7.75" Width="1.5" />
@@ -44,7 +66,7 @@
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
       <FileName>Model\Tasks\Common\Common3.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.19" Collapsed="true" />
+    <Lollipop Position="0.194" Collapsed="true" />
   </Class>
   <Class Name="Lab4.Model.Tasks.Individual.IndividualTasksA.IndividualA1" Collapsed="true">
     <Position X="0.5" Y="4" Width="1.5" />
@@ -167,21 +189,25 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Lab4.Utils.MyConverter.Converter">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAFAAAAgAAAAAAAAAAAABAAAAABAAAAAA=</HashCode>
       <FileName>Utils\Converter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab4.Utils.ExtractForTasks" Collapsed="true">
-    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AOAAAMEAAIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Utils\ExtractForTasks.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_inputService" />
+      <Property Name="_outputService" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="Lab4.Utils.InputService" Collapsed="true">
-    <Position X="9.5" Y="2.25" Width="1.5" />
+  <Class Name="Lab4.Utils.InputService">
+    <Position X="9.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAABAAABAAIAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Utils\InputService.cs</FileName>
@@ -189,7 +215,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Lab4.Model.Tasks.Base.ITask">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="3.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Model\Tasks\Base\ITask.cs</FileName>
