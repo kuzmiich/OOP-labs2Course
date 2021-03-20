@@ -1,7 +1,7 @@
-﻿using Lab5.Interfaces;
+﻿using Lab7.Views;
 using System;
 
-namespace Lab5.Utils
+namespace Lab7.Utils
 {
     public class InputService : IInputService
     {

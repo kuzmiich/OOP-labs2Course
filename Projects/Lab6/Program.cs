@@ -1,11 +1,11 @@
-﻿using Lab5.Controllers;
-using Lab5.Interfaces;
-using Lab5.Models.Individual;
-using Lab5.Utils;
-using Lab5.Views;
+﻿using Lab7.Controllers;
+using Lab7.Views;
+using Lab7.Models.Individual;
+using Lab7.Utils;
+using Lab7.Views;
 using System.Collections.Generic;
 
-namespace Lab5
+namespace Lab7
 {
     public static class Program
     {

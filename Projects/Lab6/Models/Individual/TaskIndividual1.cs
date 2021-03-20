@@ -1,10 +1,10 @@
-﻿using Lab5.Interfaces;
-using Lab5.Utils;
-using Lab5.Views;
+﻿using Lab7.Views;
+using Lab7.Utils;
+using Lab7.Views;
 using System;
 using System.Linq;
 
-namespace Lab5.Models.Individual
+namespace Lab7.Models.Individual
 {
     class TaskIndividual1 : ITaskResult, ITaskInfo
     {

@@ -1,10 +1,10 @@
-﻿using Lab5.Interfaces;
-using Lab5.Utils;
-using Lab5.Views;
+﻿using Lab7.Views;
+using Lab7.Utils;
+using Lab7.Views;
 using System;
 using System.Collections.Generic;
 
-namespace Lab5.Models.Task_E
+namespace Lab7.Models.Task_E
 {
     public class TaskE2 : ITaskResult, ITaskInfo
     {

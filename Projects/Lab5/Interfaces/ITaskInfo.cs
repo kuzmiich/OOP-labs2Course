@@ -1,4 +1,4 @@
-﻿namespace Lab5.Interfaces
+﻿namespace Lab7.Views
 {
     public interface ITaskInfo
     {

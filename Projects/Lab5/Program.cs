@@ -1,15 +1,15 @@
-﻿using Lab5.Controllers;
-using Lab5.Interfaces;
-using Lab5.Models.Task_A;
-using Lab5.Models.Task_B;
-using Lab5.Models.Task_C;
-using Lab5.Models.Task_D;
-using Lab5.Models.Task_E;
-using Lab5.Utils;
-using Lab5.Views;
+﻿using Lab7.Controllers;
+using Lab7.Views;
+using Lab7.Models.Task_A;
+using Lab7.Models.Task_B;
+using Lab7.Models.Task_C;
+using Lab7.Models.Task_D;
+using Lab7.Models.Task_E;
+using Lab7.Utils;
+using Lab7.Views;
 using System.Collections.Generic;
 
-namespace Lab5
+namespace Lab7
 {
     public static class Program
     {

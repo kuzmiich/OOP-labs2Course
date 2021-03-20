@@ -1,8 +1,8 @@
-﻿using Lab5.Interfaces;
+﻿using Lab7.Views;
 using System;
 using System.Collections.Generic;
 
-namespace Lab5.Utils
+namespace Lab7.Utils
 {
     public class TaskExtractor
     {

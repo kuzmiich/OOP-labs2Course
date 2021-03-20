@@ -1,14 +1,20 @@
-﻿using Lab5.Interfaces;
+﻿using Lab7.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab5.Views
+namespace Lab7.Views
 {
     public class OutputService : IOutputService
     {
         private static readonly object _syncRoot = new object();
         private static OutputService _instance;
+
+        private OutputService()
+        {
+
+        }
+
         public static OutputService GetInstance()
         {
             if (_instance == null)
@@ -23,14 +29,12 @@ namespace Lab5.Views
             }
             return _instance;
         }
-        private OutputService()
-        {
 
-        }
         public void ShowMessage(string msg)
         {
             Console.WriteLine(msg);
         }
+
         public static string ConvertIEnumerableToString<T>(IEnumerable<T> enumerable)
         {
             var builder = new StringBuilder();

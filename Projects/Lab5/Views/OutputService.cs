@@ -1,9 +1,9 @@
-﻿using Lab5.Interfaces;
+﻿using Lab7.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab5.Views
+namespace Lab7.Views
 {
     public class OutputService : IOutputService
     {

@@ -1,10 +1,10 @@
-﻿using Lab5.Interfaces;
-using Lab5.Utils;
+﻿using Lab7.Views;
+using Lab7.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lab5.Controllers
+namespace Lab7.Controllers
 {
     public class MainController
     {
@@ -12,6 +12,7 @@ namespace Lab5.Controllers
         public IInputService InputService { get; init; }
         public IOutputService OutputService { get; init; }
         public TaskExtractor Extractor { get; init; }
+
         public MainController(List<ITaskResult> tasks, IInputService inputService, IOutputService outputService)
         {
             InputService = inputService;
